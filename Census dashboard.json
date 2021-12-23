@@ -1,0 +1,696 @@
+{
+  "properties": {
+    "lenses": {
+      "0": {
+        "order": 0,
+        "parts": {
+          "0": {
+            "position": {
+              "x": 0,
+              "y": 0,
+              "colSpan": 4,
+              "rowSpan": 4
+            },
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "options",
+                  "isOptional": true
+                },
+                {
+                  "name": "sharedTimeRange",
+                  "isOptional": true
+                }
+              ],
+              "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+              "settings": {
+                "content": {
+                  "options": {
+                    "chart": {
+                      "metrics": [
+                        {
+                          "resourceMetadata": {
+                            "region": "global",
+                            "resourceType": "microsoft.resources/subscriptions",
+                            "subscription": {
+                              "subscriptionId": "818dc134-6e7c-41a1-91e1-7bd398371a23",
+                              "displayName": "Azure subscription 1",
+                              "uniqueDisplayName": "Azure subscription 1"
+                            }
+                          },
+                          "name": "Latency",
+                          "aggregationType": 4,
+                          "namespace": "microsoft.resources/subscriptions",
+                          "metricVisualization": {
+                            "displayName": "Latency",
+                            "resourceDisplayName": "Azure subscription 1"
+                          }
+                        }
+                      ],
+                      "title": "Avg Latency for Azure subscription 1 in Global region ",
+                      "titleKind": 1,
+                      "visualization": {
+                        "chartType": 2,
+                        "legendVisualization": {
+                          "isVisible": true,
+                          "position": 2,
+                          "hideSubtitle": false
+                        },
+                        "axisVisualization": {
+                          "x": {
+                            "isVisible": true,
+                            "axisType": 2
+                          },
+                          "y": {
+                            "isVisible": true,
+                            "axisType": 1
+                          }
+                        },
+                        "disablePinning": true
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "1": {
+            "position": {
+              "x": 4,
+              "y": 0,
+              "colSpan": 6,
+              "rowSpan": 4
+            },
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "ComponentId",
+                  "value": "/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/EquityMarketResourceGroup/providers/Microsoft.Storage/storageAccounts/equitymarketstorage",
+                  "isOptional": true
+                },
+                {
+                  "name": "TimeContext",
+                  "value": null,
+                  "isOptional": true
+                },
+                {
+                  "name": "ResourceIds",
+                  "isOptional": true
+                },
+                {
+                  "name": "ConfigurationId",
+                  "value": "Community-Workbooks/Individual Storage/Overview",
+                  "isOptional": true
+                },
+                {
+                  "name": "Type",
+                  "value": "storage-insights",
+                  "isOptional": true
+                },
+                {
+                  "name": "GalleryResourceType",
+                  "value": "microsoft.storage/storageaccounts",
+                  "isOptional": true
+                },
+                {
+                  "name": "PinName",
+                  "value": "Storage Account Overview",
+                  "isOptional": true
+                },
+                {
+                  "name": "StepSettings",
+                  "value": "{\"chartId\":\"workbook85d2d5d7-0e4c-4c24-8d42-47bf8300bdc0\",\"version\":\"MetricsItem/2.0\",\"size\":0,\"chartType\":2,\"resourceType\":\"microsoft.storage/storageaccounts\",\"metricScope\":0,\"resourceParameter\":\"Resource\",\"resourceIds\":[\"{Resource}\"],\"timeContextFromParameter\":\"TimeRange\",\"timeContext\":{\"durationMs\":14400000},\"metrics\":[{\"namespace\":\"microsoft.storage/storageaccounts/blobservices\",\"metric\":\"microsoft.storage/storageaccounts/blobservices-Transaction-Transactions\",\"aggregation\":1,\"splitBy\":null,\"columnName\":\"Blob transactions\"},{\"namespace\":\"microsoft.storage/storageaccounts/fileservices\",\"metric\":\"microsoft.storage/storageaccounts/fileservices-Transaction-Transactions\",\"aggregation\":1,\"columnName\":\"File transactions\"},{\"namespace\":\"microsoft.storage/storageaccounts/queueservices\",\"metric\":\"microsoft.storage/storageaccounts/queueservices-Transaction-Transactions\",\"aggregation\":1,\"columnName\":\"Queue transactions\"},{\"namespace\":\"microsoft.storage/storageaccounts/tableservices\",\"metric\":\"microsoft.storage/storageaccounts/tableservices-Transaction-Transactions\",\"aggregation\":1,\"columnName\":\"Table transactions\"}],\"title\":\"Transactions by storage type\",\"showOpenInMe\":true,\"gridSettings\":{\"rowLimit\":10000}}",
+                  "isOptional": true
+                },
+                {
+                  "name": "ParameterValues",
+                  "value": {
+                    "Resource": {
+                      "type": 5,
+                      "value": "/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/EquityMarketResourceGroup/providers/Microsoft.Storage/storageAccounts/equitymarketstorage",
+                      "isPending": false,
+                      "isWaiting": false,
+                      "isFailed": false,
+                      "isGlobal": false,
+                      "labelValue": "Any one",
+                      "displayName": "Storage Account",
+                      "specialValue": "value::1",
+                      "formattedValue": "/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/EquityMarketResourceGroup/providers/Microsoft.Storage/storageAccounts/equitymarketstorage"
+                    },
+                    "TimeRange": {
+                      "type": 4,
+                      "value": {
+                        "durationMs": 14400000
+                      },
+                      "isPending": false,
+                      "isWaiting": false,
+                      "isFailed": false,
+                      "isGlobal": false,
+                      "labelValue": "Last 4 hours",
+                      "displayName": "Time Range",
+                      "formattedValue": "Last 4 hours"
+                    },
+                    "tab": {
+                      "type": 1,
+                      "value": "overview",
+                      "formattedValue": "overview"
+                    }
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "Location",
+                  "isOptional": true
+                }
+              ],
+              "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookMetricsPart"
+            }
+          },
+          "2": {
+            "position": {
+              "x": 10,
+              "y": 0,
+              "colSpan": 6,
+              "rowSpan": 4
+            },
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "ComponentId",
+                  "value": "/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/EquityMarketResourceGroup/providers/Microsoft.Storage/storageAccounts/equitymarketstorage",
+                  "isOptional": true
+                },
+                {
+                  "name": "TimeContext",
+                  "value": null,
+                  "isOptional": true
+                },
+                {
+                  "name": "ResourceIds",
+                  "isOptional": true
+                },
+                {
+                  "name": "ConfigurationId",
+                  "value": "Community-Workbooks/Individual Storage/Overview",
+                  "isOptional": true
+                },
+                {
+                  "name": "Type",
+                  "value": "storage-insights",
+                  "isOptional": true
+                },
+                {
+                  "name": "GalleryResourceType",
+                  "value": "microsoft.storage/storageaccounts",
+                  "isOptional": true
+                },
+                {
+                  "name": "PinName",
+                  "value": "Storage Account Overview",
+                  "isOptional": true
+                },
+                {
+                  "name": "StepSettings",
+                  "value": "{\"chartId\":\"workbook85d2d5d7-0e4c-4c24-8d42-47bf8300bdc0\",\"version\":\"MetricsItem/2.0\",\"size\":0,\"chartType\":2,\"resourceType\":\"microsoft.storage/storageaccounts\",\"metricScope\":0,\"resourceParameter\":\"Resource\",\"resourceIds\":[\"{Resource}\"],\"timeContextFromParameter\":\"TimeRange\",\"timeContext\":{\"durationMs\":14400000},\"metrics\":[{\"namespace\":\"microsoft.storage/storageaccounts\",\"metric\":\"microsoft.storage/storageaccounts-Transaction-SuccessE2ELatency\",\"aggregation\":4,\"splitBy\":null},{\"namespace\":\"microsoft.storage/storageaccounts\",\"metric\":\"microsoft.storage/storageaccounts-Transaction-SuccessServerLatency\",\"aggregation\":4}],\"title\":\"Success latency -  End-to-end & Server\",\"showOpenInMe\":true,\"gridSettings\":{\"rowLimit\":10000}}",
+                  "isOptional": true
+                },
+                {
+                  "name": "ParameterValues",
+                  "value": {
+                    "Resource": {
+                      "type": 5,
+                      "value": "/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/EquityMarketResourceGroup/providers/Microsoft.Storage/storageAccounts/equitymarketstorage",
+                      "isPending": false,
+                      "isWaiting": false,
+                      "isFailed": false,
+                      "isGlobal": false,
+                      "labelValue": "Any one",
+                      "displayName": "Storage Account",
+                      "specialValue": "value::1",
+                      "formattedValue": "/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/EquityMarketResourceGroup/providers/Microsoft.Storage/storageAccounts/equitymarketstorage"
+                    },
+                    "TimeRange": {
+                      "type": 4,
+                      "value": {
+                        "durationMs": 14400000
+                      },
+                      "isPending": false,
+                      "isWaiting": false,
+                      "isFailed": false,
+                      "isGlobal": false,
+                      "labelValue": "Last 4 hours",
+                      "displayName": "Time Range",
+                      "formattedValue": "Last 4 hours"
+                    },
+                    "tab": {
+                      "type": 1,
+                      "value": "overview",
+                      "formattedValue": "overview"
+                    }
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "Location",
+                  "isOptional": true
+                }
+              ],
+              "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookMetricsPart"
+            }
+          },
+          "3": {
+            "position": {
+              "x": 16,
+              "y": 2,
+              "colSpan": 2,
+              "rowSpan": 2
+            },
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "ComponentId",
+                  "value": {
+                    "SubscriptionId": "818dc134-6e7c-41a1-91e1-7bd398371a23",
+                    "ResourceGroup": "EquityMarketResourceGroup",
+                    "Name": "equitymarketstorage",
+                    "LinkedApplicationType": -1,
+                    "ResourceId": "/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/EquityMarketResourceGroup/providers/Microsoft.Storage/storageAccounts/equitymarketstorage",
+                    "ResourceType": "microsoft.storage/storageaccounts",
+                    "IsAzureFirst": true
+                  }
+                },
+                {
+                  "name": "ResourceIds",
+                  "value": [
+                    "/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/EquityMarketResourceGroup/providers/Microsoft.Storage/storageAccounts/equitymarketstorage"
+                  ],
+                  "isOptional": true
+                },
+                {
+                  "name": "Type",
+                  "value": "workbook",
+                  "isOptional": true
+                },
+                {
+                  "name": "TimeContext",
+                  "isOptional": true
+                },
+                {
+                  "name": "ConfigurationId",
+                  "value": "/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourcegroups/equitymarketresourcegroup/providers/microsoft.insights/workbooks/51e04db5-a89e-4272-b2c7-59abdff73d73",
+                  "isOptional": true
+                },
+                {
+                  "name": "ViewerMode",
+                  "value": false,
+                  "isOptional": true
+                },
+                {
+                  "name": "GalleryResourceType",
+                  "value": "microsoft.storage/storageaccounts",
+                  "isOptional": true
+                },
+                {
+                  "name": "NotebookParams",
+                  "isOptional": true
+                },
+                {
+                  "name": "Location",
+                  "value": "eastus",
+                  "isOptional": true
+                },
+                {
+                  "name": "Version",
+                  "value": "1.0",
+                  "isOptional": true
+                }
+              ],
+              "type": "Extension/AppInsightsExtension/PartType/NotebookPinnedPart",
+              "viewState": {
+                "content": {
+                  "configurationId": "/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourcegroups/equitymarketresourcegroup/providers/microsoft.insights/workbooks/51e04db5-a89e-4272-b2c7-59abdff73d73"
+                }
+              }
+            }
+          },
+          "4": {
+            "position": {
+              "x": 0,
+              "y": 4,
+              "colSpan": 6,
+              "rowSpan": 4
+            },
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "ComponentId",
+                  "value": "/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/EquityMarketResourceGroup/providers/Microsoft.Storage/storageAccounts/equitymarketstorage",
+                  "isOptional": true
+                },
+                {
+                  "name": "TimeContext",
+                  "value": null,
+                  "isOptional": true
+                },
+                {
+                  "name": "ResourceIds",
+                  "isOptional": true
+                },
+                {
+                  "name": "ConfigurationId",
+                  "value": "Community-Workbooks/Individual Storage/Overview",
+                  "isOptional": true
+                },
+                {
+                  "name": "Type",
+                  "value": "storage-insights",
+                  "isOptional": true
+                },
+                {
+                  "name": "GalleryResourceType",
+                  "value": "microsoft.storage/storageaccounts",
+                  "isOptional": true
+                },
+                {
+                  "name": "PinName",
+                  "value": "Storage Account Overview",
+                  "isOptional": true
+                },
+                {
+                  "name": "StepSettings",
+                  "value": "{\"chartId\":\"workbook85d2d5d7-0e4c-4c24-8d42-47bf8300bdc0\",\"version\":\"MetricsItem/2.0\",\"size\":0,\"chartType\":2,\"resourceType\":\"microsoft.storage/storageaccounts\",\"metricScope\":0,\"resourceParameter\":\"Resource\",\"resourceIds\":[\"{Resource}\"],\"timeContextFromParameter\":\"TimeRange\",\"timeContext\":{\"durationMs\":14400000},\"metrics\":[{\"namespace\":\"microsoft.storage/storageaccounts/blobservices\",\"metric\":\"microsoft.storage/storageaccounts/blobservices-Capacity-BlobCapacity\",\"aggregation\":4,\"splitBy\":null,\"columnName\":\"Blob capacity\"},{\"namespace\":\"microsoft.storage/storageaccounts/fileservices\",\"metric\":\"microsoft.storage/storageaccounts/fileservices-Capacity-FileCapacity\",\"aggregation\":4,\"columnName\":\"File capacity\"},{\"namespace\":\"microsoft.storage/storageaccounts/queueservices\",\"metric\":\"microsoft.storage/storageaccounts/queueservices-Capacity-QueueCapacity\",\"aggregation\":4,\"columnName\":\"Queue capacity\"},{\"namespace\":\"microsoft.storage/storageaccounts/tableservices\",\"metric\":\"microsoft.storage/storageaccounts/tableservices-Capacity-TableCapacity\",\"aggregation\":4,\"columnName\":\"Table capacity\"}],\"title\":\"Used capacity\",\"showOpenInMe\":true,\"gridSettings\":{\"rowLimit\":10000}}",
+                  "isOptional": true
+                },
+                {
+                  "name": "ParameterValues",
+                  "value": {
+                    "Resource": {
+                      "type": 5,
+                      "value": "/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/EquityMarketResourceGroup/providers/Microsoft.Storage/storageAccounts/equitymarketstorage",
+                      "isPending": false,
+                      "isWaiting": false,
+                      "isFailed": false,
+                      "isGlobal": false,
+                      "labelValue": "Any one",
+                      "displayName": "Storage Account",
+                      "specialValue": "value::1",
+                      "formattedValue": "/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/EquityMarketResourceGroup/providers/Microsoft.Storage/storageAccounts/equitymarketstorage"
+                    },
+                    "TimeRange": {
+                      "type": 4,
+                      "value": {
+                        "durationMs": 14400000
+                      },
+                      "isPending": false,
+                      "isWaiting": false,
+                      "isFailed": false,
+                      "isGlobal": false,
+                      "labelValue": "Last 4 hours",
+                      "displayName": "Time Range",
+                      "formattedValue": "Last 4 hours"
+                    },
+                    "tab": {
+                      "type": 1,
+                      "value": "overview",
+                      "formattedValue": "overview"
+                    }
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "Location",
+                  "isOptional": true
+                }
+              ],
+              "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookMetricsPart"
+            }
+          },
+          "5": {
+            "position": {
+              "x": 6,
+              "y": 4,
+              "colSpan": 6,
+              "rowSpan": 4
+            },
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "ComponentId",
+                  "value": "/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/EquityMarketResourceGroup/providers/Microsoft.Storage/storageAccounts/equitymarketstorage",
+                  "isOptional": true
+                },
+                {
+                  "name": "TimeContext",
+                  "value": null,
+                  "isOptional": true
+                },
+                {
+                  "name": "ResourceIds",
+                  "isOptional": true
+                },
+                {
+                  "name": "ConfigurationId",
+                  "value": "Community-Workbooks/Individual Storage/Overview",
+                  "isOptional": true
+                },
+                {
+                  "name": "Type",
+                  "value": "storage-insights",
+                  "isOptional": true
+                },
+                {
+                  "name": "GalleryResourceType",
+                  "value": "microsoft.storage/storageaccounts",
+                  "isOptional": true
+                },
+                {
+                  "name": "PinName",
+                  "value": "Storage Account Overview",
+                  "isOptional": true
+                },
+                {
+                  "name": "StepSettings",
+                  "value": "{\"chartId\":\"workbook85d2d5d7-0e4c-4c24-8d42-47bf8300bdc0\",\"version\":\"MetricsItem/2.0\",\"size\":0,\"chartType\":2,\"resourceType\":\"microsoft.storage/storageaccounts\",\"metricScope\":0,\"resourceParameter\":\"Resource\",\"resourceIds\":[\"{Resource}\"],\"timeContextFromParameter\":\"TimeRange\",\"timeContext\":{\"durationMs\":14400000},\"metrics\":[{\"namespace\":\"microsoft.storage/storageaccounts\",\"metric\":\"microsoft.storage/storageaccounts-Transaction-Ingress\",\"aggregation\":1,\"splitBy\":null},{\"namespace\":\"microsoft.storage/storageaccounts\",\"metric\":\"microsoft.storage/storageaccounts-Transaction-Egress\",\"aggregation\":1}],\"title\":\"Bandwidth\",\"showOpenInMe\":true,\"gridSettings\":{\"rowLimit\":10000}}",
+                  "isOptional": true
+                },
+                {
+                  "name": "ParameterValues",
+                  "value": {
+                    "Resource": {
+                      "type": 5,
+                      "value": "/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/EquityMarketResourceGroup/providers/Microsoft.Storage/storageAccounts/equitymarketstorage",
+                      "isPending": false,
+                      "isWaiting": false,
+                      "isFailed": false,
+                      "isGlobal": false,
+                      "labelValue": "Any one",
+                      "displayName": "Storage Account",
+                      "specialValue": "value::1",
+                      "formattedValue": "/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/EquityMarketResourceGroup/providers/Microsoft.Storage/storageAccounts/equitymarketstorage"
+                    },
+                    "TimeRange": {
+                      "type": 4,
+                      "value": {
+                        "durationMs": 14400000
+                      },
+                      "isPending": false,
+                      "isWaiting": false,
+                      "isFailed": false,
+                      "isGlobal": false,
+                      "labelValue": "Last 4 hours",
+                      "displayName": "Time Range",
+                      "formattedValue": "Last 4 hours"
+                    },
+                    "tab": {
+                      "type": 1,
+                      "value": "overview",
+                      "formattedValue": "overview"
+                    }
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "Location",
+                  "isOptional": true
+                }
+              ],
+              "type": "Extension/AppInsightsExtension/PartType/PinnedNotebookMetricsPart"
+            }
+          },
+          "6": {
+            "position": {
+              "x": 12,
+              "y": 4,
+              "colSpan": 6,
+              "rowSpan": 4
+            },
+            "metadata": {
+              "inputs": [
+                {
+                  "name": "options",
+                  "value": {
+                    "chart": {
+                      "metrics": [
+                        {
+                          "resourceMetadata": {
+                            "id": "/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/EquityMarketResourceGroup/providers/Microsoft.Storage/storageAccounts/equitymarketstorage"
+                          },
+                          "name": "Transactions",
+                          "aggregationType": 1,
+                          "namespace": "microsoft.storage/storageaccounts",
+                          "metricVisualization": {
+                            "displayName": "Transactions",
+                            "color": null
+                          }
+                        }
+                      ],
+                      "title": "Transactions by API name",
+                      "titleKind": 2,
+                      "visualization": {
+                        "chartType": 2,
+                        "legendVisualization": {
+                          "isVisible": true,
+                          "position": 2,
+                          "hideSubtitle": false
+                        },
+                        "axisVisualization": {
+                          "x": {
+                            "isVisible": true,
+                            "axisType": 2
+                          },
+                          "y": {
+                            "isVisible": true,
+                            "axisType": 1
+                          }
+                        }
+                      },
+                      "grouping": {
+                        "dimension": "ApiName",
+                        "top": 50
+                      },
+                      "timespan": {
+                        "relative": {
+                          "duration": 14400000
+                        },
+                        "showUTCTime": false,
+                        "grain": 1
+                      }
+                    }
+                  },
+                  "isOptional": true
+                },
+                {
+                  "name": "sharedTimeRange",
+                  "isOptional": true
+                }
+              ],
+              "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+              "settings": {
+                "content": {
+                  "options": {
+                    "chart": {
+                      "metrics": [
+                        {
+                          "resourceMetadata": {
+                            "id": "/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/EquityMarketResourceGroup/providers/Microsoft.Storage/storageAccounts/equitymarketstorage"
+                          },
+                          "name": "Transactions",
+                          "aggregationType": 1,
+                          "namespace": "microsoft.storage/storageaccounts",
+                          "metricVisualization": {
+                            "displayName": "Transactions",
+                            "color": null
+                          }
+                        }
+                      ],
+                      "title": "Transactions by API name",
+                      "titleKind": 2,
+                      "visualization": {
+                        "chartType": 2,
+                        "legendVisualization": {
+                          "isVisible": true,
+                          "position": 2,
+                          "hideSubtitle": false
+                        },
+                        "axisVisualization": {
+                          "x": {
+                            "isVisible": true,
+                            "axisType": 2
+                          },
+                          "y": {
+                            "isVisible": true,
+                            "axisType": 1
+                          }
+                        },
+                        "disablePinning": true
+                      },
+                      "grouping": {
+                        "dimension": "ApiName",
+                        "top": 50
+                      }
+                    }
+                  }
+                }
+              },
+              "filters": {
+                "MsPortalFx_TimeRange": {
+                  "model": {
+                    "format": "local",
+                    "granularity": "auto",
+                    "relative": "240m"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "metadata": {
+      "model": {
+        "timeRange": {
+          "value": {
+            "relative": {
+              "duration": 24,
+              "timeUnit": 1
+            }
+          },
+          "type": "MsPortalFx.Composition.Configuration.ValueTypes.TimeRange"
+        },
+        "filterLocale": {
+          "value": "en-us"
+        },
+        "filters": {
+          "value": {
+            "MsPortalFx_TimeRange": {
+              "model": {
+                "format": "utc",
+                "granularity": "auto",
+                "relative": "24h"
+              },
+              "displayCache": {
+                "name": "UTC Time",
+                "value": "Past 24 hours"
+              },
+              "filteredPartIds": [
+                "StartboardPart-MonitorChartPart-4e2bff81-92d0-4d18-b67a-b597d294fa5b",
+                "StartboardPart-PinnedNotebookMetricsPart-4e2bff81-92d0-4d18-b67a-b597d294fa5d",
+                "StartboardPart-MonitorChartPart-4e2bff81-92d0-4d18-b67a-b597d294fa5f",
+                "StartboardPart-PinnedNotebookMetricsPart-4e2bff81-92d0-4d18-b67a-b597d294fa61",
+                "StartboardPart-PinnedNotebookMetricsPart-4e2bff81-92d0-4d18-b67a-b597d294fa63",
+                "StartboardPart-PinnedNotebookMetricsPart-4e2bff81-92d0-4d18-b67a-b597d294fa65"
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "name": "Census dashboard",
+  "type": "Microsoft.Portal/dashboards",
+  "location": "INSERT LOCATION",
+  "tags": {
+    "hidden-title": "Census dashboard"
+  },
+  "apiVersion": "2015-08-01-preview"
+}
