@@ -36,3 +36,16 @@ _* *HPI -House Price Index. A house price index (HPI) measures the price changes
 ### Load
 * Load the data to Azure Blob storage using Spark.
 
+## Step3: Data Collection
+## Step4: Data Exploration
+## Step5: : Prototyping Your Data Pipeline
+## Step6: Scale Your Prototype
+## Step7: Create The Deployment Architecture
+![Deployment_Architecture](https://user-images.githubusercontent.com/9127333/147524129-a7b4484a-1d47-48bb-8939-e1cdb249fd42.jpeg)
+
+## Step 8: Build a Monitoring Dashboard
+
+Conclusion 
+
+
+
