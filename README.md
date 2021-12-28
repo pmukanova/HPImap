@@ -37,6 +37,22 @@ _* *HPI -House Price Index. A house price index (HPI) measures the price changes
 * Load the data to Azure Blob storage using Spark.
 
 ## Step3: Data Collection
+The American Community Survey (ACS) is an ongoing survey that provides data every year -- giving communities the current information they need to plan investments and services. The ACS covers a broad range of topics about social, economic, demographic, and housing characteristics of the U.S. population.
+
+The 5-year estimates from the ACS are "period" estimates that represent data collected over a period of time. The primary advantage of using multiyear estimates is the increased statistical reliability of the data for less populated areas and small population subgroups.
+
+Data Profiles contain broad social, economic, housing, and demographic information. The data are presented as population counts and percentages. There are over 1,000 variables in this dataset.
+
+Example Call: api.census.gov/data/2019/acs/acs5/profile?get=group(DP02)&for=us:1&key=YOUR_KEY_GOES_HERE 
+
+Example: Variable DP02_0002PE, “Family households (families)”, represents the percent estimate for table DP02 row number 2.
+
+![image](https://user-images.githubusercontent.com/9127333/147525730-71896a22-e739-4735-b055-3629b8976779.png)
+
+
+
+An * indicates that the estimate is significantly different (at a 90% confidence level) than the estimate from the most current year. A "c" indicates the estimates for that year and the current year are both controlled; a statistical test is not appropriate.
+
 ## Step4: Data Exploration
 ![Census Data Profiles ER Diagram](https://user-images.githubusercontent.com/9127333/147525097-94563c5f-5216-486b-8645-3d46c5369fd1.png)
 
