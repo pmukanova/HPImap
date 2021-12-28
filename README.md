@@ -38,6 +38,8 @@ _* *HPI -House Price Index. A house price index (HPI) measures the price changes
 
 ## Step3: Data Collection
 ## Step4: Data Exploration
+![Census Data Profiles ER Diagram](https://user-images.githubusercontent.com/9127333/147525097-94563c5f-5216-486b-8645-3d46c5369fd1.png)
+
 ## Step5: : Prototyping Your Data Pipeline
 ## Step6: Scale Your Prototype
 I chose to use Azure Databricks to host loaded data from census. 
