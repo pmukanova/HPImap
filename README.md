@@ -44,9 +44,11 @@ Example Call: api.census.gov/data/2019/acs/acs5/profile?get=group(DP02)&for=us:1
 
 ## Step4: Data Exploration
 Data Profiles contain broad social, economic, housing, and demographic information. The data are presented as population counts and percentages. There are over 1,000 variables in this dataset.
-The column names have id instead of names: Example: Variable DP02_0002PE, “Family households (families)”, represents the percent estimate for table DP02 row number 2.
+
+The column names have id instead of names.
+
+Example: Variable DP02_0002PE, “Family households (families)”, represents the percent estimate for table DP02 row number 2.
 I extracted variables for each year from census API and plan to use it as a reference table. 
-![image](https://user-images.githubusercontent.com/9127333/147525730-71896a22-e739-4735-b055-3629b8976779.png)
 
 During the exploration step I noticed some values are unusefull since they don't have rational numerical values. Those values needs to be cleaned or droped.I plan to clean it on loading step using Spark. Please, refer to following table for explanation of annotation values for more understanding. 
 ![image](https://user-images.githubusercontent.com/9127333/147526263-dd4e13f6-ad2b-44f2-921a-4c48c6d572d4.png)
