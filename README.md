@@ -87,9 +87,9 @@ I chose to use Azure Databricks for scaling since the data does not need to be p
 
 Another point to note is, befor pulling the data, I mounted a storage account container to write data and for that we have to give credentials like:
 ```
- `storageAccountName = 'censusstorage'`
- `storageAccountAccessKey ='____________________________________________________'`
- `blobContainerName = 'firstcontainer'`
+ storageAccountName = 'censusstorage'
+ storageAccountAccessKey ='____________________________________________________'
+ blobContainerName = 'firstcontainer'
 ```
 ## Step7: Create The Deployment Architecture
 ![Deployment_Architecture](https://user-images.githubusercontent.com/9127333/147524495-e3b60ce2-c6af-40f4-9149-2a75372c664e.jpeg)
