@@ -1,4 +1,3 @@
-# Open-ended Capstone 
 # House price index map
 
 
@@ -54,7 +53,7 @@ I wrote python script to constract API calls using request library.
 Using spark I transformed pandas dataframe to spark's to drop null values. 
 
 ### Load
-The extracted and cleaned data gets written in Azure blob storages. 
+The extracted and cleaned data gets written in Azure blob storages by mounting the folder. 
 
 After Exploraing data in this dataset, I came to following Data Model:
 ![Census Data Profiles ER Diagram](https://user-images.githubusercontent.com/9127333/147525097-94563c5f-5216-486b-8645-3d46c5369fd1.png)
@@ -72,6 +71,6 @@ After that I intent to dump the data into Azure CosmosDB so data analytics can r
 Link to the Azure Monitor: https://portal.azure.com/#@perizatmenardgmail.onmicrosoft.com/dashboard/arm/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/dashboards/providers/Microsoft.Portal/dashboards/288897f7-5fb4-47d6-a662-2c4281604c73 
 
 ## Conclusion 
-The dataset is cleaned and ready for analysis. 
+The dataset is cleaned and ready for analysis. It includes data for social, economic, housing, and demographic information of counties in US.
 
 
