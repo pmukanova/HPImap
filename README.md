@@ -28,8 +28,8 @@
 The American Community Survey (ACS) is an ongoing survey that provides data every year which is ACS 1-year estimate. 
 The 5-year estimates from the ACS are "period" estimates that represent data collected over a period of time. The primary advantage of using multiyear estimates is the increased statistical reliability of the data for less populated areas and small population subgroups.
 
-* Example Call for 5 year estimate: api.census.gov/data/2019/acs/acs**5**/profile?get=group(DP02)&for=county:*&key=YOUR_KEY_GOES_HERE 
-* Example Call for 1 year estimate: api.census.gov/data/2019/acs/acs**1**/profile?get=group(DP02)&for=county:*&key=YOUR_KEY_GOES_HERE
+* Example Call for 5 year estimate: `api.census.gov/data/2019/acs/acs**5**/profile?get=group(DP02)&for=county:*&key=YOUR_KEY_GOES_HERE` 
+* Example Call for 1 year estimate: `api.census.gov/data/2019/acs/acs**1**/profile?get=group(DP02)&for=county:*&key=YOUR_KEY_GOES_HERE`
 
 As you can see we are pulling data on for all counties in US. The group parameter will change according which profile information we are looking for. As for year, we will have to call it in a loop to constract the API from 2009 to 2019. 
 
@@ -80,10 +80,11 @@ As you can see I used Star Schema and my main table will be housing characterist
 I chose to use Azure Databricks for scaling since the data does not need to be pulled regularly. The census data gets updated once a year. Databricks was the great solution offering cluster with Spark framework comparing to Azure Data Factory which uses GUI to integrate data and do not offer much flexibility. I chose Databricks because it implements a programmatic approach that provides the flexibility of fine-tuning codes to optimize performance. 
 
 Another point to note is, befor pulling the data, I mounted a storage account container to write data and for that we have to give credentials like:
-* `storageAccountName = 'equitymarketstorage'`
-* `storageAccountAccessKey ='____________________________________________________'`
-* `blobContainerName = 'firstcontainer'`
-
+```
+ `storageAccountName = 'equitymarketstorage'`
+ `storageAccountAccessKey ='____________________________________________________'`
+ `blobContainerName = 'firstcontainer'`
+```
 ## Step7: Create The Deployment Architecture
 ![Deployment_Architecture](https://user-images.githubusercontent.com/9127333/147524495-e3b60ce2-c6af-40f4-9149-2a75372c664e.jpeg)
 As architecture shows I make to API calls: one for Data profiles, second for yearly variables and write the data in blob storages using Azure Databricks. 
