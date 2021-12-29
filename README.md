@@ -82,9 +82,7 @@ After that I intent to dump the data into Azure CosmosDB so data analytics can r
 ## Step 8: Build a Monitoring Dashboard
 ![image](https://user-images.githubusercontent.com/9127333/147698040-0a4e9963-c6e0-429b-83b5-1432175d826b.png)
 
-Link to the Azure Monitor: https://portal.azure.com/#@perizatmenardgmail.onmicrosoft.com/dashboard/arm/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/dashboards/providers/Microsoft.Portal/dashboards/288897f7-5fb4-47d6-a662-2c4281604c73 
-
-## Conclusion 
+Link to the Azure Monitor: [Census Dashboard]( https://portal.azure.com/#@perizatmenardgmail.onmicrosoft.com/dashboard/arm/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/dashboards/providers/Microsoft.Portal/dashboards/288897f7-5fb4-47d6-a662-2c4281604c73 )
 The dataset is cleaned and ready for analysis. It includes data for social, economic, housing, and demographic information of counties in US.
 
 
