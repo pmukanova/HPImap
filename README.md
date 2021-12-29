@@ -28,8 +28,8 @@
 The American Community Survey (ACS) is an ongoing survey that provides data every year which is ACS 1-year estimate. 
 The 5-year estimates from the ACS are "period" estimates that represent data collected over a period of time. The primary advantage of using multiyear estimates is the increased statistical reliability of the data for less populated areas and small population subgroups.
 
-* Example Call for 5 year estimate: `api.census.gov/data/2019/acs/acs**5**/profile?get=group(DP02)&for=county:*&key=YOUR_KEY_GOES_HERE` 
-* Example Call for 1 year estimate: `api.census.gov/data/2019/acs/acs**1**/profile?get=group(DP02)&for=county:*&key=YOUR_KEY_GOES_HERE`
+* Example Call for 5 year estimate: `api.census.gov/data/2019/acs/acs5/profile?get=group(DP02)&for=county:*&key=YOUR_KEY_GOES_HERE` 
+* Example Call for 1 year estimate: `api.census.gov/data/2019/acs/acs1/profile?get=group(DP02)&for=county:*&key=YOUR_KEY_GOES_HERE`
 
 As you can see we are pulling data on for all counties in US. The group parameter will change according which profile information we are looking for. As for year, we will have to call it in a loop to constract the API from 2009 to 2019. 
 
@@ -40,6 +40,8 @@ Since the column names have id instead of names, I will need a reference table t
 
 Example: Variable DP02_0002PE, “Family households (families)”, represents the percent estimate for table DP02 row number 2.
 I extracted variables for each year from 2009 to 2019 from census API and plan to use it as a reference table. 
+
+API call:` https://api.census.gov/data/2019/acs/acs5/profile/variables.html`
 
 During the exploration step I noticed some values are unusefull since they don't have rational numerical values. Those values need to be cleaned or dropped.I plan to clean it on loading step using Spark. Please, refer to following table for explanation of annotation values for more understanding. 
 
