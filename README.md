@@ -21,14 +21,15 @@
 1. __Data used:__ Data will be extracted from census.gov using census API.
 
 ### Specifications
- As a result of the migration of wealthier residents and more upscale businesses into less-affluent urban areas, the fundamental complexion of the neighborhood is transformed: demographics shift, the physical of the area characteristics evolve, and most notably, housing prices rise (Maciag, 2015).
+> As a result of the migration of wealthier residents and more upscale businesses into less-affluent urban areas, the fundamental complexion of the neighborhood is transformed: demographics shift, the physical of the area characteristics evolve, and most notably, housing prices rise (Maciag, 2015).
 
 
 ## Step3: Data Collection
 The American Community Survey (ACS) is an ongoing survey that provides data every year which is ACS 1-year estimate. 
 The 5-year estimates from the ACS are "period" estimates that represent data collected over a period of time. The primary advantage of using multiyear estimates is the increased statistical reliability of the data for less populated areas and small population subgroups.
 
-Example Call: api.census.gov/data/2019/acs/acs5/profile?get=group(DP02)&for=us:1&key=YOUR_KEY_GOES_HERE 
+* Example Call for 5 year estimate: api.census.gov/data/2019/acs/acs**5**/profile?get=group(DP02)&for=us:1&key=YOUR_KEY_GOES_HERE 
+* Example Call for 1 year estimate: api.census.gov/data/2019/acs/acs**1**/profile?get=group(DP02)&for=us:1&key=YOUR_KEY_GOES_HERE
 
 ## Step4: Data Exploration
 Data Profiles contain broad social, economic, housing, and demographic information. The data are presented as population counts and percentages. There are over 1,000 variables in this dataset for each profile.
@@ -47,17 +48,19 @@ During the exploration step I noticed some values are unusefull since they don't
 During the prototyping step I had to automate the process of extracting, transforming and loading the data from data.census.gov. 
 
 ### Extract
-I wrote OOP python class named CensusDataProfiles to constract API calls using requests library. By defining a base url and passing a group name and a year as a parameter we make those calls. The class downloads 10 csv files(2009-2019) for each profile group which is:
+I wrote OOP python class named **CensusDataProfiles** to constract API calls using requests library. By defining a base url and passing a group name and a year as a parameter we make those calls. The class downloads 10 csv files(2009-2019) for each profile group which is:
 * DP02 - social characteristics
 * DP03 - Economic characteristics
 * DP04 - housing characteristics
 * DP05 - demographic characteristics
 
-I wrote another OOP python class named CensusVariables which is inherits from parent class CensusDataProfiles and downloads variables - data dictionary for each year for all the data profiles at ones. 
+I wrote another OOP python class named **CensusVariables** which is inherits from parent class** CensusDataProfiles** and downloads variables - data dictionary for each year for all the data profiles at ones. 
 
 ### Transform 
-I used pandas dataframe to drop null values: __df = df.dropna(axis='columns', how='all')__
-
+I used pandas dataframe to drop null values: 
+```
+df = df.dropna(axis='columns', how='all')
+```
 ### Load
 The extracted and cleaned data gets written in Azure blob storage by creating spark Dataframe and mounting the cloud folder. 
 ```
@@ -77,12 +80,14 @@ I chose to use Azure Databricks for scaling since the data does not need to be p
 ## Step7: Create The Deployment Architecture
 ![Deployment_Architecture](https://user-images.githubusercontent.com/9127333/147524495-e3b60ce2-c6af-40f4-9149-2a75372c664e.jpeg)
 As architecture shows I make to API calls: one for Data profiles, second for yearly variables and write the data in blob storages using Azure Databricks. 
-After that I intent to dump the data into Azure CosmosDB so data analytics can run their analysis using Azure Analysis services. Moreover, I built a monitoring dashboard using Azure Monitor to monitor the resources my pipeline using.
+After that I intent to dump the data into Azure CosmosDB so data analytics can run their analysis using Azure Analysis services. Moreover, I built a monitoring dashboard using Azure Monitor to monitor the resources my pipeline is using.
 
 ## Step 8: Build a Monitoring Dashboard
 ![image](https://user-images.githubusercontent.com/9127333/147698040-0a4e9963-c6e0-429b-83b5-1432175d826b.png)
 
 Link to the Azure Monitor: [Census Dashboard]( https://portal.azure.com/#@perizatmenardgmail.onmicrosoft.com/dashboard/arm/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/dashboards/providers/Microsoft.Portal/dashboards/288897f7-5fb4-47d6-a662-2c4281604c73 )
+
+## Conclusion 
 The dataset is cleaned and ready for analysis. It includes data for social, economic, housing, and demographic information of counties in US.
 
 
