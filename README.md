@@ -73,7 +73,8 @@ I chose to use Azure Databricks for scaling since the data does not need to be p
 
 ## Step7: Create The Deployment Architecture
 ![Deployment_Architecture](https://user-images.githubusercontent.com/9127333/147524495-e3b60ce2-c6af-40f4-9149-2a75372c664e.jpeg)
-As architecture shows I make to API calls: one for Data profiles, second for yearly variables and write the data 
+As architecture shows I make to API calls: one for Data profiles, second for yearly variables and write the data in blob storages using Azure Databricks. 
+After that I intent to use 
 
 ## Step 8: Build a Monitoring Dashboard
 Link to the Azure Monitor: https://portal.azure.com/#@perizatmenardgmail.onmicrosoft.com/dashboard/arm/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/dashboards/providers/Microsoft.Portal/dashboards/288897f7-5fb4-47d6-a662-2c4281604c73 
