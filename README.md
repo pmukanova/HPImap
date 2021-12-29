@@ -25,6 +25,8 @@
 
 
 ## Step3: Data Collection
+
+### Data Profiles
 The American Community Survey (ACS) is an ongoing survey that provides data every year which is ACS 1-year estimate. 
 The 5-year estimates from the ACS are "period" estimates that represent data collected over a period of time. The primary advantage of using multiyear estimates is the increased statistical reliability of the data for less populated areas and small population subgroups.
 
@@ -33,17 +35,17 @@ The 5-year estimates from the ACS are "period" estimates that represent data col
 
 As you can see we are pulling data on for all counties in US. The group parameter will change according which profile information we are looking for. As for year, we will have to call it in a loop to constract the API from 2009 to 2019. 
 
-## Step4: Data Exploration
-### Data Profiles
-Data Profiles contain broad social, economic, housing, and demographic information. The data are presented as population counts and percentages. There are over 1,000 variables in this dataset for each profile.
-
-Since the column names have id instead of names, I will need a reference table to look up the meaning of each column in datasets. 
-Example: Variable DP02_0002PE, “Family households (families)”, represents the percent estimate for table DP02 row number 2.
-
 ### Variables
 I extracted variables for each year from 2009 to 2019 from census API and plan to use it as a reference table. 
 * Example Call for 5 year estimate for 2019: `https://api.census.gov/data/2019/acs/acs5/profile/variables.json` 
 * Example Call for 1 year estimate for 2019: `https://api.census.gov/data/2019/acs/acs1/profile/variables.json`
+
+## Step4: Data Exploration
+
+Data Profiles contain broad social, economic, housing, and demographic information. The data are presented as population counts and percentages. There are over 1,000 variables in this dataset for each profile.
+
+Since the column names have id instead of names, I will need a reference table to look up the meaning of each column in datasets. 
+Example: Variable DP02_0002PE, “Family households (families)”, represents the percent estimate for table DP02 row number 2.
 
 During the exploration step I noticed some values are unusefull since they don't have rational numerical values. Those values need to be cleaned or dropped.I plan to clean it on loading step using Spark. Please, refer to following table for explanation of annotation values for more understanding. 
 
