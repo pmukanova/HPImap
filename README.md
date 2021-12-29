@@ -74,6 +74,8 @@ As architecture shows I make to API calls: one for Data profiles, second for yea
 After that I intent to dump the data into Azure CosmosDB so data analytics can run their analysis using Azure Analysis services. Moreover, I built a monitoring dashboard using Azure Monitor to monitor the resources my pipeline using.
 
 ## Step 8: Build a Monitoring Dashboard
+![image](https://user-images.githubusercontent.com/9127333/147698040-0a4e9963-c6e0-429b-83b5-1432175d826b.png)
+
 Link to the Azure Monitor: https://portal.azure.com/#@perizatmenardgmail.onmicrosoft.com/dashboard/arm/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/dashboards/providers/Microsoft.Portal/dashboards/288897f7-5fb4-47d6-a662-2c4281604c73 
 
 ## Conclusion 
