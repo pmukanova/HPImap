@@ -1,11 +1,10 @@
-# HPImap
-Capstone Project 
+# Open-ended Capstone 
+# House price index map
 
 * Perizat Menard
 * Email: p.mukanova@gmail.com
 * Skype: p.mukanova
 
-# Open-ended Capstone 
 ## Step2: Project Proposal
 
 ### Overview
@@ -43,9 +42,9 @@ The 5-year estimates from the ACS are "period" estimates that represent data col
 Example Call: api.census.gov/data/2019/acs/acs5/profile?get=group(DP02)&for=us:1&key=YOUR_KEY_GOES_HERE 
 
 ## Step4: Data Exploration
-Data Profiles contain broad social, economic, housing, and demographic information. The data are presented as population counts and percentages. There are over 1,000 variables in this dataset.
+Data Profiles contain broad social, economic, housing, and demographic information. The data are presented as population counts and percentages. There are over 1,000 variables in this dataset for each profile.
 
-The column names have id instead of names.
+Since the column names have id instead of names, I will need a refernce table to look up the meaning of ech column. 
 
 Example: Variable DP02_0002PE, “Family households (families)”, represents the percent estimate for table DP02 row number 2.
 I extracted variables for each year from census API and plan to use it as a reference table. 
@@ -57,10 +56,24 @@ After Exploraing data in this dataset, I came to following Data Model:
 ![Census Data Profiles ER Diagram](https://user-images.githubusercontent.com/9127333/147525097-94563c5f-5216-486b-8645-3d46c5369fd1.png)
 
 ## Step5: : Prototyping Your Data Pipeline
+During the prototyping step I had to automate the process of extracting, transforming and loading the data from data.census.gov. 
+
+### Extract
+I wrote python script to constract API calls using request library. 
+
+### Transform 
+Using spark I transformed pandas dataframe to spark's to drop null values. 
+
+### Load
+The extracted and cleaned data gets written in Azure blob storages. 
+
+
 ## Step6: Scale Your Prototype
-I chose to use Azure Databricks to host loaded data from census. 
+I chose to use Azure Databricks for scaling since the data does not need to be pulled regularly. The census data gets updated once a year. Databricks was the great solution offering cluster with Spark framework comparing to Azure Data Factory which comes with overhead of scheduling and monitoring pipeline. 
+
 ## Step7: Create The Deployment Architecture
 ![Deployment_Architecture](https://user-images.githubusercontent.com/9127333/147524495-e3b60ce2-c6af-40f4-9149-2a75372c664e.jpeg)
+As architecture shows I make to API calls: one for Data profiles, second for yearly variables and write the data 
 
 ## Step 8: Build a Monitoring Dashboard
 Link to the Azure Monitor: https://portal.azure.com/#@perizatmenardgmail.onmicrosoft.com/dashboard/arm/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/dashboards/providers/Microsoft.Portal/dashboards/288897f7-5fb4-47d6-a662-2c4281604c73 
