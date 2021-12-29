@@ -24,13 +24,6 @@ _* *HPI -House Price Index. A house price index (HPI) measures the price changes
 ### Specifications
  As a result of the migration of wealthier residents and more upscale businesses into less-affluent urban areas, the fundamental complexion of the neighborhood is transformed: demographics shift, the physical of the area characteristics evolve, and most notably, housing prices rise (Maciag, 2015).
 
-### Milestones
-#### Extract
-* Download data from sources listed in Section Overview #5. Host it Azure Storage Account. 
-#### Transform
-* Use pandas and spark dataframes to do manipulations with data.
-#### Load
-* Load the data to Azure Blob storage using Spark.
 
 ## Step3: Data Collection
 The American Community Survey (ACS) is an ongoing survey that provides data every year which is ACS 1-year estimate. 
@@ -47,6 +40,7 @@ Example: Variable DP02_0002PE, “Family households (families)”, represents th
 I extracted variables for each year from census API and plan to use it as a reference table. 
 
 During the exploration step I noticed some values are unusefull since they don't have rational numerical values. Those values needs to be cleaned or droped.I plan to clean it on loading step using Spark. Please, refer to following table for explanation of annotation values for more understanding. 
+
 ![image](https://user-images.githubusercontent.com/9127333/147526263-dd4e13f6-ad2b-44f2-921a-4c48c6d572d4.png)
 
 
