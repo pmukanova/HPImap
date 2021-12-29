@@ -81,7 +81,7 @@ I chose to use Azure Databricks for scaling since the data does not need to be p
 
 Another point to note is, befor pulling the data, I mounted a storage account container to write data and for that we have to give credentials like:
 * `storageAccountName = 'equitymarketstorage'`
-* `storageAccountAccessKey = ~~'32Q+pSDygN/vBS/+2OPfjXJrW9+T4gogsOJY3mEob/GON/Hls27FX1ZaxbBxEjsmA+/+XJn1AXkFj2dUSrOeWA=='~~`
+* `storageAccountAccessKey ='____________________________________________________'`
 * `blobContainerName = 'firstcontainer'`
 
 ## Step7: Create The Deployment Architecture
