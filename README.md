@@ -1,9 +1,6 @@
 # Open-ended Capstone 
 # House price index map
 
-* Perizat Menard
-* Email: p.mukanova@gmail.com
-* Skype: p.mukanova
 
 ## Step2: Project Proposal
 
@@ -52,8 +49,6 @@ I extracted variables for each year from census API and plan to use it as a refe
 During the exploration step I noticed some values are unusefull since they don't have rational numerical values. Those values needs to be cleaned or droped.I plan to clean it on loading step using Spark. Please, refer to following table for explanation of annotation values for more understanding. 
 ![image](https://user-images.githubusercontent.com/9127333/147526263-dd4e13f6-ad2b-44f2-921a-4c48c6d572d4.png)
 
-After Exploraing data in this dataset, I came to following Data Model:
-![Census Data Profiles ER Diagram](https://user-images.githubusercontent.com/9127333/147525097-94563c5f-5216-486b-8645-3d46c5369fd1.png)
 
 ## Step5: : Prototyping Your Data Pipeline
 During the prototyping step I had to automate the process of extracting, transforming and loading the data from data.census.gov. 
@@ -67,6 +62,9 @@ Using spark I transformed pandas dataframe to spark's to drop null values.
 ### Load
 The extracted and cleaned data gets written in Azure blob storages. 
 
+After Exploraing data in this dataset, I came to following Data Model:
+![Census Data Profiles ER Diagram](https://user-images.githubusercontent.com/9127333/147525097-94563c5f-5216-486b-8645-3d46c5369fd1.png)
+
 
 ## Step6: Scale Your Prototype
 I chose to use Azure Databricks for scaling since the data does not need to be pulled regularly. The census data gets updated once a year. Databricks was the great solution offering cluster with Spark framework comparing to Azure Data Factory which comes with overhead of scheduling and monitoring pipeline. 
@@ -74,12 +72,12 @@ I chose to use Azure Databricks for scaling since the data does not need to be p
 ## Step7: Create The Deployment Architecture
 ![Deployment_Architecture](https://user-images.githubusercontent.com/9127333/147524495-e3b60ce2-c6af-40f4-9149-2a75372c664e.jpeg)
 As architecture shows I make to API calls: one for Data profiles, second for yearly variables and write the data in blob storages using Azure Databricks. 
-After that I intent to dump the data into Azure CosmosDB so data analytics can run their analysis using Azure Analysis services. 
+After that I intent to dump the data into Azure CosmosDB so data analytics can run their analysis using Azure Analysis services. Moreover, I built a monitoring dashboard using Azure Monitor to monitor the resources my pipeline using.
 
 ## Step 8: Build a Monitoring Dashboard
 Link to the Azure Monitor: https://portal.azure.com/#@perizatmenardgmail.onmicrosoft.com/dashboard/arm/subscriptions/818dc134-6e7c-41a1-91e1-7bd398371a23/resourceGroups/dashboards/providers/Microsoft.Portal/dashboards/288897f7-5fb4-47d6-a662-2c4281604c73 
 
 ## Conclusion 
-
+The dataset is cleaned and ready for analysis. 
 
 
