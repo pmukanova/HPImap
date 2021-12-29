@@ -60,7 +60,7 @@ I wrote OOP python class named **CensusDataProfiles** to constract API calls usi
 * DP04 - housing characteristics
 * DP05 - demographic characteristics
 
-I wrote another OOP python class named **CensusVariables** which is inherits from parent class** CensusDataProfiles** and downloads variables - data dictionary for each year for all the data profiles at ones. 
+I wrote another OOP python class named **CensusVariables** which is inherits from parent class **CensusDataProfiles** and downloads variables - data dictionary for each year for all the data profiles at ones. 
 
 ### Transform 
 I used pandas dataframe to drop null values: 
@@ -81,11 +81,11 @@ As you can see I used Star Schema and my main table will be housing characterist
 
 
 ## Step6: Scale Your Prototype
-I chose to use Azure Databricks for scaling since the data does not need to be pulled regularly. The census data gets updated once a year. Databricks was the great solution offering cluster with Spark framework comparing to Azure Data Factory which uses GUI to integrate data and do not offer much flexibility. I chose Databricks because it implements a programmatic approach that provides the flexibility of fine-tuning codes to optimize performance. 
+I chose to use Azure Databricks for scaling since the data does not need to be pulled regularly. The census data gets updated once a year. Databricks was the great solution offering cluster with Spark API comparing to Azure Data Factory which uses GUI to integrate data and do not offer much flexibility. I chose Databricks because it implements a programmatic approach that provides the flexibility of fine-tuning codes to optimize performance. 
 
 Another point to note is, befor pulling the data, I mounted a storage account container to write data and for that we have to give credentials like:
 ```
- `storageAccountName = 'equitymarketstorage'`
+ `storageAccountName = 'censusstorage'`
  `storageAccountAccessKey ='____________________________________________________'`
  `blobContainerName = 'firstcontainer'`
 ```
