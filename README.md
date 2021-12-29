@@ -13,7 +13,7 @@
 1. Data.Census.gov 
 1. 2019 Data Profiles | American Community Survey | US Census Bureau
 
-_* *HPI -House Price Index. A house price index (HPI) measures the price changes of residential housing as a percentage change from some specific start date (which has HPI of 100)*_
+> _* *HPI -House Price Index. A house price index (HPI) measures the price changes of residential housing as a percentage change from some specific start date (which has HPI of 100)*_
 
 ### Goals:
 1. __Make the process of buying a house easier and mobile:__ Help users identify great opportunities by looking at changes in the Housing price index by USA county level in each year since 2009.
@@ -61,8 +61,8 @@ I used pandas dataframe to drop null values: __df = df.dropna(axis='columns', ho
 ### Load
 The extracted and cleaned data gets written in Azure blob storage by creating spark Dataframe and mounting the cloud folder. 
 ```
-__sparkDF=spark.createDataFrame(df)__
-**sparkDF.write.mode("overwrite").parquet('dbfs:/mnt/FileStore/MountFolder/census_data/{}/{}_{}_year_estimate.parquet'.format(self.group_name,year,self.estimate))**
+sparkDF=spark.createDataFrame(df)
+sparkDF.write.mode("overwrite").parquet('dbfs:/mnt/FileStore/MountFolder/census_data/{}/{}_{}_year_estimate.parquet'.format(self.group_name,year,self.estimate))
 ```
 
 ## Data Model 
