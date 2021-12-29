@@ -41,7 +41,7 @@ Since the column names have id instead of names, I will need a reference table t
 Example: Variable DP02_0002PE, “Family households (families)”, represents the percent estimate for table DP02 row number 2.
 I extracted variables for each year from 2009 to 2019 from census API and plan to use it as a reference table. 
 
-API call:` https://api.census.gov/data/2019/acs/acs5/profile/variables.html`
+You can owerview the file by : https://api.census.gov/data/2019/acs/acs5/profile/variables.json
 
 During the exploration step I noticed some values are unusefull since they don't have rational numerical values. Those values need to be cleaned or dropped.I plan to clean it on loading step using Spark. Please, refer to following table for explanation of annotation values for more understanding. 
 
