@@ -60,10 +60,10 @@ I used pandas dataframe to drop null values: __df = df.dropna(axis='columns', ho
 
 ### Load
 The extracted and cleaned data gets written in Azure blob storage by creating spark Dataframe and mounting the cloud folder. 
-'''
+```
 __sparkDF=spark.createDataFrame(df)__
 **sparkDF.write.mode("overwrite").parquet('dbfs:/mnt/FileStore/MountFolder/census_data/{}/{}_{}_year_estimate.parquet'.format(self.group_name,year,self.estimate))**
-'''
+```
 
 ## Data Model 
 As you can see I used Star Schema and my main table will be housing characteristics. Other entities can be easily joined using county id and users can get sophisticated data for the area they looking for. 
