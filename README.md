@@ -79,6 +79,11 @@ As you can see I used Star Schema and my main table will be housing characterist
 ## Step6: Scale Your Prototype
 I chose to use Azure Databricks for scaling since the data does not need to be pulled regularly. The census data gets updated once a year. Databricks was the great solution offering cluster with Spark framework comparing to Azure Data Factory which uses GUI to integrate data and do not offer much flexibility. I chose Databricks because it implements a programmatic approach that provides the flexibility of fine-tuning codes to optimize performance. 
 
+Another point to note is, befor pulling the data, I mounted a storage account container to write data and for that we have to give credentials like:
+`storageAccountName = 'equitymarketstorage'`
+`storageAccountAccessKey = '32Q+pSDygN/vBS/+2OPfjXJrW9+T4gogsOJY3mEob/GON/Hls27FX1ZaxbBxEjsmA+/+XJn1AXkFj2dUSrOeWA=='`
+`blobContainerName = 'firstcontainer'`
+
 ## Step7: Create The Deployment Architecture
 ![Deployment_Architecture](https://user-images.githubusercontent.com/9127333/147524495-e3b60ce2-c6af-40f4-9149-2a75372c664e.jpeg)
 As architecture shows I make to API calls: one for Data profiles, second for yearly variables and write the data in blob storages using Azure Databricks. 
