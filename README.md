@@ -33,12 +33,12 @@ Example Call: api.census.gov/data/2019/acs/acs5/profile?get=group(DP02)&for=us:1
 ## Step4: Data Exploration
 Data Profiles contain broad social, economic, housing, and demographic information. The data are presented as population counts and percentages. There are over 1,000 variables in this dataset for each profile.
 
-Since the column names have id instead of names, I will need a refernce table to look up the meaning of ech column. 
+Since the column names have id instead of names, I will need a refernce table to look up the meaning of each column. 
 
 Example: Variable DP02_0002PE, “Family households (families)”, represents the percent estimate for table DP02 row number 2.
-I extracted variables for each year from census API and plan to use it as a reference table. 
+I extracted variables for each year from 2009 to 2019 from census API and plan to use it as a reference table. 
 
-During the exploration step I noticed some values are unusefull since they don't have rational numerical values. Those values needs to be cleaned or droped.I plan to clean it on loading step using Spark. Please, refer to following table for explanation of annotation values for more understanding. 
+During the exploration step I noticed some values are unusefull since they don't have rational numerical values. Those values need to be cleaned or dropped.I plan to clean it on loading step using Spark. Please, refer to following table for explanation of annotation values for more understanding. 
 
 ![image](https://user-images.githubusercontent.com/9127333/147526263-dd4e13f6-ad2b-44f2-921a-4c48c6d572d4.png)
 
@@ -47,7 +47,13 @@ During the exploration step I noticed some values are unusefull since they don't
 During the prototyping step I had to automate the process of extracting, transforming and loading the data from data.census.gov. 
 
 ### Extract
-I wrote python script to constract API calls using request library. 
+I wrote OOP python class named CensusDataProfiles to constract API calls using requests library. By defining a base url and passing a group name and a year as a parameter we make those calls. The class downloads 10 csv files(2009-2019) for each profile group which is:
+* DP02 - social characteristics
+* DP03 - Economic characteristics
+* DP04 - housing characteristics
+* DP05 - demographic characteristics
+
+I wrote another OOP python class named CensusVariables which is inherits from parent class CensusDataProfiles and downloads variables - data dictionary for each year for all the data profiles at ones. 
 
 ### Transform 
 Using spark I transformed pandas dataframe to spark's to drop null values. 
