@@ -56,12 +56,13 @@ I wrote OOP python class named CensusDataProfiles to constract API calls using r
 I wrote another OOP python class named CensusVariables which is inherits from parent class CensusDataProfiles and downloads variables - data dictionary for each year for all the data profiles at ones. 
 
 ### Transform 
-Using spark I transformed pandas dataframe to spark's to drop null values. 
+I used pandas dataframe to drop null values: __df = df.dropna(axis='columns', how='all')__
 
 ### Load
 The extracted and cleaned data gets written in Azure blob storages by mounting the folder. 
 
 ## Data Model 
+As you can see I used Star Schema and my main table will be housing characteristics. Other entities can be easily joined using county id and users can get sophisticated data for the area they looking for. 
 
 ![Census Data Profiles ER Diagram (1)](https://user-images.githubusercontent.com/9127333/147698656-0976b7e1-ada4-4fb2-a902-b104ce58f312.png)
 
