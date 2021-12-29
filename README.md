@@ -61,8 +61,9 @@ Using spark I transformed pandas dataframe to spark's to drop null values.
 ### Load
 The extracted and cleaned data gets written in Azure blob storages by mounting the folder. 
 
-After Exploraing data in this dataset, I came to following Data Model:
-![Census Data Profiles ER Diagram](https://user-images.githubusercontent.com/9127333/147525097-94563c5f-5216-486b-8645-3d46c5369fd1.png)
+## Data Model 
+
+![Census Data Profiles ER Diagram (1)](https://user-images.githubusercontent.com/9127333/147698656-0976b7e1-ada4-4fb2-a902-b104ce58f312.png)
 
 
 ## Step6: Scale Your Prototype
